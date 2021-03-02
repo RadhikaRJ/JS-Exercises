@@ -92,3 +92,15 @@ function updateArr(a){
 // console.log("After appending, new array: "+newArr);
 console.log("After appending, new array: "+updateArr(arr));
 console.log("_________________________________________________________________");
+
+//exercise7
+
+const lessThan10=(n)=> {if(n<10) return n ;}
+
+var ArrayOfNumbers=[1,2,3,21,31,41];
+
+console.log("\n"+"numbers in Array: "+ArrayOfNumbers);
+var newArrayLessThan10=ArrayOfNumbers.filter(lessThan10);
+console.log("Numbers less than 10 identified using Array.filter():  "+newArrayLessThan10);
+
+console.log("_________________________________________________________________");
