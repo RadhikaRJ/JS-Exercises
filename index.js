@@ -104,3 +104,21 @@ var newArrayLessThan10=ArrayOfNumbers.filter(lessThan10);
 console.log("Numbers less than 10 identified using Array.filter():  "+newArrayLessThan10);
 
 console.log("_________________________________________________________________");
+
+//exercise8
+ 
+ var someNumbersInArr=[1,2,3,4,5,6,7,8,9];
+
+console.log("\n"+"numbers in the array: "+someNumbersInArr);
+
+ function returnObjectForEachItem(someArr){
+
+  return someArr.map((item)=>{return {"obj":item}})
+ }
+
+var newObjectOfNumbers=returnObjectForEachItem(someNumbersInArr);
+
+console.log("\n"+" for each of the numbers an obect is returned by passing to function returnObjectForEachItem(someArr)"); 
+console.log(newObjectOfNumbers);
+
+console.log("_________________________________________________________________");
