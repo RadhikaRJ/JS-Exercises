@@ -36,3 +36,28 @@ function TotalOfAll(...args){
 console.log("Total of 1,2,3,4,5,6,7,8,9: "+ TotalOfAll(1,2,3,4,5,6,7,8,9));
 
 console.log("_________________________________________________________________");
+
+//exercise4
+
+function AverageOfAll(...args){
+  let average=0;
+  let lengthOfArgs=args.length;
+  if(lengthOfArgs==0){
+    return 0;
+  }
+  else{
+    let totalOfNum=0
+    
+    for(let i of args){
+      // console.log(i)
+      totalOfNum=i+totalOfNum;
+    }
+    average=totalOfNum/args.length; //as var is hoisted, it will be available outside the for loop with value 9
+    return average;
+  }
+}
+
+console.log("Average of 1,2,3,4,5,6,7,8,9: "+ AverageOfAll(1,2,3,4,5,6,7,8,9));
+
+console.log("Average of 0: "+ AverageOfAll());
+console.log("_________________________________________________________________");
