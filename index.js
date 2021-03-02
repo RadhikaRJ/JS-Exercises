@@ -131,13 +131,13 @@ console.log("\n"+"array of nums: "+someNumbersInArr);
 console.log("Calculating sum using reduce: "+ calcSum(someNumbersInArr));
 console.log("_________________________________________________________________");
 
-//exercise10.a
+//exercise10
 
 var anArrayOfNumbers=[1,2,3,4,5,6,7,8,9,10,11,12,13,14]
 
 console.log("\n"+"array of integers: "+anArrayOfNumbers);
 
-
+//exercise10 A
 console.log("--------------------------------------------");
 const findOddNumbers=(n)=>{if(n%2!=0) return n}
 
@@ -149,3 +149,25 @@ console.log("Odd Numbers identified using filter: "+oddNumbers);
 console.log("Sum of Odd Numbers calculated using reduce: "+sumOfOddNumbers )
 
 console.log("--------------------------------------------");
+//exercise 10 B----Discuss with Team Scope---using reduce
+var total=0
+var oddIndiceNumbers= anArrayOfNumbers.map((item,index)=>{
+  
+  if(index%2!=0){
+    total=total+item;
+    return item
+  }
+});
+
+var sumOfOddIndiceNumbers= anArrayOfNumbers.reduce((current,oddTotal, index)=>{
+  if(index%2!=0)
+  {
+   return current+oddTotal
+  }
+})
+
+console.log("Numbers at odd indices: "+oddIndiceNumbers);
+
+console.log("Sum of numbers at odd Indices: "+total);
+
+//exercise 10 C
