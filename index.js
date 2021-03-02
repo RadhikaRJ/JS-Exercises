@@ -133,7 +133,7 @@ console.log("_________________________________________________________________")
 
 //exercise10
 
-var anArrayOfNumbers=[1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+var anArrayOfNumbers=[1,20,3,4,50,6,7,80,9,10,11,12,13,14]
 
 console.log("\n"+"array of integers: "+anArrayOfNumbers);
 
@@ -169,5 +169,15 @@ var sumOfOddIndiceNumbers= anArrayOfNumbers.reduce((current,oddTotal, index)=>{
 console.log("Numbers at odd indices: "+oddIndiceNumbers);
 
 console.log("Sum of numbers at odd Indices: "+total);
-
+console.log("--------------------------------------------");
 //exercise 10 C
+
+const divBy10=(num)=>{
+  if(num%10==0){
+    return num;
+  }
+}
+
+let numsDivBy10=anArrayOfNumbers.filter(divBy10);
+console.log("The numbers divisible by 10 are: "+numsDivBy10);
+console.log("--------------------------------------------");
