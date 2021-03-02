@@ -21,3 +21,18 @@ for (var c=0;c<newColors.length;c++){
   console.log(newColors[c]);
 }
 console.log("_________________________________________________________________");
+
+
+//exercise3
+
+function TotalOfAll(...args){
+  let total=0;
+  for (let i of args){
+    total=total+i
+  }
+  return total;
+}
+
+console.log("Total of 1,2,3,4,5,6,7,8,9: "+ TotalOfAll(1,2,3,4,5,6,7,8,9));
+
+console.log("_________________________________________________________________");
