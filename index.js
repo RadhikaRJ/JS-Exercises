@@ -10,7 +10,7 @@ console.log("_________________________________________________________________")
 //exercise2
 
 const colors=['Red','Yellow','Green','Pink','Blue'];
-console.log("Colors in array: ");
+console.log("\n"+"Colors in array: ");
 for (var i=0;i< colors.length;i++){
   console.log(colors[i]);
 }
@@ -33,7 +33,7 @@ function TotalOfAll(...args){
   return total;
 }
 
-console.log("Total of 1,2,3,4,5,6,7,8,9: "+ TotalOfAll(1,2,3,4,5,6,7,8,9));
+console.log("\n"+"Total of 1,2,3,4,5,6,7,8,9: "+ TotalOfAll(1,2,3,4,5,6,7,8,9));
 
 console.log("_________________________________________________________________");
 
@@ -57,7 +57,7 @@ function AverageOfAll(...args){
   }
 }
 
-console.log("Average of 1,2,3,4,5,6,7,8,9: "+ AverageOfAll(1,2,3,4,5,6,7,8,9));
+console.log("\n"+"Average of 1,2,3,4,5,6,7,8,9: "+ AverageOfAll(1,2,3,4,5,6,7,8,9));
 
 console.log("Average of 0: "+ AverageOfAll());
 console.log("_________________________________________________________________");
@@ -70,10 +70,25 @@ function incrementAge(someObj){
    return newBirthdayObj;
 }
 
-console.log("items of birthday object: "+"\n name: "+birthdayObj.name+"\n age: "+birthdayObj.age
+console.log("\n"+"items of birthday object: "+"\n name: "+birthdayObj.name+"\n age: "+birthdayObj.age
 )
 
 console.log("Incrementing the age using Pure function incrementAge(): ")
 
 console.log(incrementAge(birthdayObj).age +" is the new age");
+console.log("_________________________________________________________________");
+
+//exercise6
+
+const arr=[1,3,4,5];
+console.log("\n"+"Existing array is having following values: "+arr+"\n Appending number 22 to the array");
+
+function updateArr(a){
+ const anew=[...a,22];
+ return anew;
+}
+
+// const newArr=[...arr,22];
+// console.log("After appending, new array: "+newArr);
+console.log("After appending, new array: "+updateArr(arr));
 console.log("_________________________________________________________________");
