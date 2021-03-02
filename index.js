@@ -122,3 +122,11 @@ console.log("\n"+" for each of the numbers an obect is returned by passing to fu
 console.log(newObjectOfNumbers);
 
 console.log("_________________________________________________________________");
+
+//exercise9
+
+const calcSum=(arrOfNum)=>{ return sum=arrOfNum.reduce((current,totalofvalues)=> current+totalofvalues,0 )}
+
+console.log("\n"+"array of nums: "+someNumbersInArr);
+console.log("Calculating sum using reduce: "+ calcSum(someNumbersInArr));
+console.log("_________________________________________________________________");
