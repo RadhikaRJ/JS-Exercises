@@ -130,3 +130,22 @@ const calcSum=(arrOfNum)=>{ return sum=arrOfNum.reduce((current,totalofvalues)=>
 console.log("\n"+"array of nums: "+someNumbersInArr);
 console.log("Calculating sum using reduce: "+ calcSum(someNumbersInArr));
 console.log("_________________________________________________________________");
+
+//exercise10.a
+
+var anArrayOfNumbers=[1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+
+console.log("\n"+"array of integers: "+anArrayOfNumbers);
+
+
+console.log("--------------------------------------------");
+const findOddNumbers=(n)=>{if(n%2!=0) return n}
+
+var oddNumbers=anArrayOfNumbers.filter(findOddNumbers);
+
+let sumOfOddNumbers=oddNumbers.reduce((current, sum)=>{ return current+sum})
+console.log("Odd Numbers identified using filter: "+oddNumbers);
+
+console.log("Sum of Odd Numbers calculated using reduce: "+sumOfOddNumbers )
+
+console.log("--------------------------------------------");
