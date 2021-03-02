@@ -181,3 +181,17 @@ const divBy10=(num)=>{
 let numsDivBy10=anArrayOfNumbers.filter(divBy10);
 console.log("The numbers divisible by 10 are: "+numsDivBy10);
 console.log("--------------------------------------------");
+
+//exercise 10 D
+
+let incdecnum=anArrayOfNumbers.map((item)=>{
+  if(item%2==0){
+    return item-1;
+  }
+  else return item+1;
+})
+
+console.log("The array is : "+ anArrayOfNumbers);
+console.log("The array of numbers where odd numbers are incremented by 1 and even are decremented by 1: "+incdecnum);
+
+console.log("--------------------------------------------");
