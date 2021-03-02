@@ -9,3 +9,15 @@ console.log("_________________________________________________________________")
 
 //exercise2
 
+const colors=['Red','Yellow','Green','Pink','Blue'];
+console.log("Colors in array: ");
+for (var i=0;i< colors.length;i++){
+  console.log(colors[i]);
+}
+console.log("--------------------------------------------------------");
+const newColors=[...colors,'Orange','Maroon'];
+console.log("In new array, New colors added with existing colors in older array:");
+for (var c=0;c<newColors.length;c++){
+  console.log(newColors[c]);
+}
+console.log("_________________________________________________________________");
