@@ -61,3 +61,19 @@ console.log("Average of 1,2,3,4,5,6,7,8,9: "+ AverageOfAll(1,2,3,4,5,6,7,8,9));
 
 console.log("Average of 0: "+ AverageOfAll());
 console.log("_________________________________________________________________");
+
+//exercise5
+
+const birthdayObj={name:"Radhika", age: 20}
+function incrementAge(someObj){
+   const newBirthdayObj={...someObj,age: someObj.age+1};
+   return newBirthdayObj;
+}
+
+console.log("items of birthday object: "+"\n name: "+birthdayObj.name+"\n age: "+birthdayObj.age
+)
+
+console.log("Incrementing the age using Pure function incrementAge(): ")
+
+console.log(incrementAge(birthdayObj).age +" is the new age");
+console.log("_________________________________________________________________");
