@@ -11,14 +11,14 @@ console.log("_________________________________________________________________")
 
 const colors=['Red','Yellow','Green','Pink','Blue'];
 console.log("\n"+"Colors in array: ");
-for (var i=0;i< colors.length;i++){
-  console.log(colors[i]);
+for (let color of colors){
+  console.log(color);
 }
 console.log("--------------------------------------------------------");
 const newColors=[...colors,'Orange','Maroon'];
 console.log("In new array, New colors added with existing colors in older array:");
-for (var c=0;c<newColors.length;c++){
-  console.log(newColors[c]);
+for (let c of newColors){
+  console.log(c);
 }
 console.log("_________________________________________________________________");
 
@@ -97,17 +97,17 @@ console.log("_________________________________________________________________")
 
 const lessThan10=(n)=> {if(n<10) return n ;}
 
-var ArrayOfNumbers=[1,2,3,21,31,41];
+const ArrayOfNumbers=[1,2,3,21,31,41];
 
 console.log("\n"+"numbers in Array: "+ArrayOfNumbers);
-var newArrayLessThan10=ArrayOfNumbers.filter(lessThan10);
+const newArrayLessThan10=ArrayOfNumbers.filter(lessThan10);
 console.log("Numbers less than 10 identified using Array.filter():  "+newArrayLessThan10);
 
 console.log("_________________________________________________________________");
 
 //exercise8
  
- var someNumbersInArr=[1,2,3,4,5,6,7,8,9];
+ const someNumbersInArr=[1,2,3,4,5,6,7,8,9];
 
 console.log("\n"+"numbers in the array: "+someNumbersInArr);
 
@@ -116,7 +116,7 @@ console.log("\n"+"numbers in the array: "+someNumbersInArr);
   return someArr.map((item)=>{return {"obj":item}})
  }
 
-var newObjectOfNumbers=returnObjectForEachItem(someNumbersInArr);
+const newObjectOfNumbers=returnObjectForEachItem(someNumbersInArr);
 
 console.log("\n"+" for each of the numbers an obect is returned by passing to function returnObjectForEachItem(someArr)"); 
 console.log(newObjectOfNumbers);
@@ -133,7 +133,7 @@ console.log("_________________________________________________________________")
 
 //exercise10
 
-var anArrayOfNumbers=[1,20,3,4,50,6,7,80,9,10,11,12,13,14]
+const anArrayOfNumbers=[1,20,3,4,50,6,7,80,9,10,11,12,13,14]
 
 console.log("\n"+"array of integers: "+anArrayOfNumbers);
 
@@ -141,7 +141,7 @@ console.log("\n"+"array of integers: "+anArrayOfNumbers);
 console.log("--------------------------------------------");
 const findOddNumbers=(n)=>{if(n%2!=0) return n}
 
-var oddNumbers=anArrayOfNumbers.filter(findOddNumbers);
+let oddNumbers=anArrayOfNumbers.filter(findOddNumbers);
 
 let sumOfOddNumbers=oddNumbers.reduce((current, sum)=>{ return current+sum})
 console.log("Odd Numbers identified using filter: "+oddNumbers);
@@ -150,8 +150,8 @@ console.log("Sum of Odd Numbers calculated using reduce: "+sumOfOddNumbers )
 
 console.log("--------------------------------------------");
 //exercise 10 B----Discuss with Team Scope---using reduce
-var total=0
-var oddIndiceNumbers= anArrayOfNumbers.map((item,index)=>{
+let total=0
+let oddIndiceNumbers= anArrayOfNumbers.map((item,index)=>{
   
   if(index%2!=0){
     total=total+item;
@@ -159,7 +159,7 @@ var oddIndiceNumbers= anArrayOfNumbers.map((item,index)=>{
   }
 });
 
-var sumOfOddIndiceNumbers= anArrayOfNumbers.reduce((current,oddTotal, index)=>{
+let sumOfOddIndiceNumbers= anArrayOfNumbers.reduce((current,oddTotal, index)=>{
   if(index%2!=0)
   {
    return current+oddTotal
@@ -195,3 +195,19 @@ console.log("The array is : "+ anArrayOfNumbers);
 console.log("The array of numbers where odd numbers are incremented by 1 and even are decremented by 1: "+incdecnum);
 
 console.log("--------------------------------------------");
+
+//exrcise 10 E
+
+var resultOddEvenSum={odd:0,even:0};
+var evenSum=0;
+var oddSum=0;
+const calcOddEvenSum=(resultOddEvenSum,anArrayOfNumbers)=>{
+ var result=anArrayOfNumbers.map((item)=>{
+  if(item%2==0){
+   evenSum=evenSum+item;
+  }
+  else oddSum=oddSum+item;
+})
+
+}
+
