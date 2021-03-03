@@ -196,18 +196,22 @@ console.log("The array of numbers where odd numbers are incremented by 1 and eve
 
 console.log("--------------------------------------------");
 
-//exrcise 10 E
+//exrcise 10 E 
 
-var resultOddEvenSum={odd:0,even:0};
-var evenSum=0;
-var oddSum=0;
-const calcOddEvenSum=(resultOddEvenSum,anArrayOfNumbers)=>{
- var result=anArrayOfNumbers.map((item)=>{
-  if(item%2==0){
-   evenSum=evenSum+item;
-  }
-  else oddSum=oddSum+item;
-})
+const someNumbers=[1,2,3,4]
 
+let oddnum=(a)=>{if(a%2!=0)return a}
+let evenNum=(a)=>{if(a%2==0)return a}
+
+let oddEvenSeparateSum=(numbers)=>{
+  let alloddnumSum=numbers.filter(oddnum).reduce((currentitem,sum)=>{ return currentitem+sum});;
+  // console.log(alloddnumSum)
+  let allevenNumSum=numbers.filter(evenNum).reduce((currentitem,sum)=> {return currentitem+sum});
+
+  return [{oddSum:alloddnumSum, evenSum:allevenNumSum}];
 }
 
+
+console.log("\n"+"Return an object with sum of all odd and even numbers separately"+"\n"+"the numbers are: "+someNumbers);
+console.log(oddEvenSeparateSum(someNumbers));
+console.log("--------------------------------------------");
