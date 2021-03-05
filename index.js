@@ -258,7 +258,7 @@ console.log("Strings having vowel in them are:");
  const returnLengthObject=(a)=>{
    let result1= a.map((item)=>{
      const container={};
-      container[item]=item.length;
+      container[item]=item.length; //setting item as key of the object and its length as value
     
      return container;
    })
@@ -266,4 +266,12 @@ console.log("Strings having vowel in them are:");
  }
 console.log("Return an array of objects with key as item and value as number of characters in the string:\n");
 console.log(returnLengthObject(arrofStrings));
+ console.log("--------------------------------------------");
+
+ //exercise 12
+ const HelloName=(name)=>{
+   return function somefunction(appendingtext){console.log(`Welcome ${name} to ${appendingtext}`)}
+ }
+ console.log("create a function which takes your name and returns a function which would add your name to anything that function says  ( CURRYING)\n ");
+ console.log(HelloName("Radhika")("Neogcamp"));
  console.log("--------------------------------------------");
