@@ -275,3 +275,22 @@ console.log(returnLengthObject(arrofStrings));
  console.log("create a function which takes your name and returns a function which would add your name to anything that function says  ( CURRYING)\n ");
  console.log(HelloName("Radhika")("Neogcamp"));
  console.log("--------------------------------------------");
+ //exercise 13
+ const logNamewithText=(name)=>{return name};
+ const loguserID=(id)=>{return id};
+
+const letsPrint=(n,i)=>{
+  console.log(logNamewithText(n)+" has an amazing user id: "+loguserID(i));
+}
+letsPrint("Radhika","007");
+console.log("--------------------------------------------");
+//exercise 14
+var somestrings = ["hello", "Matt", "Mastodon", "Cat", "Dog"];
+const containsAt=(s)=>{
+  return s.filter(hasAt);
+}
+
+const hasAt=(a)=>{if(a.includes("at"))return true;}
+console.log("Strings that include at are: \n")
+console.log(containsAt(somestrings));
+console.log("--------------------------------------------");
