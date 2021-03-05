@@ -216,6 +216,23 @@ console.log("\n"+"Return an object with sum of all odd and even numbers separate
 console.log(oddEvenSeparateSum(someNumbers));
 console.log("--------------------------------------------");
 
+//exercise11 A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log("--------------------------------------------");
 //exercise11 B
 
 const arrofStrings=["apple","orange", "mango", "papaya","lmn","jkl"];
@@ -247,6 +264,6 @@ console.log("Strings having vowel in them are:");
    })
    return result1;
  }
-
+console.log("Return an array of objects with key as item and value as number of characters in the string:\n");
 console.log(returnLengthObject(arrofStrings));
  console.log("--------------------------------------------");
