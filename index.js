@@ -215,3 +215,21 @@ let oddEvenSeparateSum=(numbers)=>{
 console.log("\n"+"Return an object with sum of all odd and even numbers separately"+"\n"+"the numbers are: "+someNumbers);
 console.log(oddEvenSeparateSum(someNumbers));
 console.log("--------------------------------------------");
+
+//exercise11 B
+
+const arrofStrings=["apple","orange", "mango", "papaya","lmn","jkl"];
+
+const hasVowel=(a)=>{
+  if(a.includes('a')||a.includes('e')||a.includes('i')||a.includes('o')||a.includes('u')){
+      
+      return true;
+  }}
+const findWordswithVowel=(ar)=>{
+ 
+   let vowelResult=ar.filter(hasVowel);
+
+  return vowelResult;
+}
+
+ console.log(findWordswithVowel(arrofStrings));
