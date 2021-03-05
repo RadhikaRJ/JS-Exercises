@@ -294,3 +294,12 @@ const hasAt=(a)=>{if(a.includes("at"))return true;}
 console.log("Strings that include at are: \n")
 console.log(containsAt(somestrings));
 console.log("--------------------------------------------");
+
+//exercise 16
+
+const strLength=(name,someFunction)=>{someFunction(name)};
+
+const greet=(n)=>console.log(`${n} have a great day!`);
+
+strLength("Radhika",greet);
+console.log("--------------------------------------------");
