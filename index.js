@@ -232,4 +232,21 @@ const findWordswithVowel=(ar)=>{
   return vowelResult;
 }
 
+console.log("Strings having vowel in them are:");
  console.log(findWordswithVowel(arrofStrings));
+ console.log("--------------------------------------------");
+
+ //exercise 11 C
+
+ const returnLengthObject=(a)=>{
+   let result1= a.map((item)=>{
+     const container={};
+      container[item]=item.length;
+    
+     return container;
+   })
+   return result1;
+ }
+
+console.log(returnLengthObject(arrofStrings));
+ console.log("--------------------------------------------");
