@@ -303,3 +303,21 @@ const greet=(n)=>console.log(`${n} have a great day!`);
 
 strLength("Radhika",greet);
 console.log("--------------------------------------------");
+
+//exercise 15
+const inc=(n)=>{return n+1};
+const sq=(n)=>{return n*n};
+const incrementThenSquare=(n)=>{return sq(inc(n));}
+
+function takeAnyNumOfFuncs(...args){
+  return  function functExecutionOrder(n){
+    let nresult=args.map(
+      (item)=>{return(item(n))});
+    return nresult;
+  }
+
+  }
+   
+console.log(takeAnyNumOfFuncs(incrementThenSquare,inc,sq)(2));
+   
+console.log("--------------------------------------------");
