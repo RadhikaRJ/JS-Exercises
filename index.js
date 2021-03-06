@@ -341,8 +341,8 @@ const printAfterDelay=(msg,delay)=>{
   setTimeout(()=>console.log(msg),delay)
 }
 
-console.log("Printing after delay of 5 secs");
-printAfterDelay("This is printed after 5 sec delay, did you notice how the dashed line got printed first?",5000);
+//console.log("Printing after delay of 5 secs");
+//printAfterDelay("This is printed after 5 sec delay, did you notice how the dashed line got printed first?",5000);
 console.log("--------------------------------------------");
 
 //exercise19
@@ -354,3 +354,17 @@ const printAfterEveryXsec=(msg,x)=>{
 console.log("--------------------------------------------");
 
 //exercise20
+
+const countDown=(n)=>{
+   let timeid=setInterval(()=>{
+    if(n==0){
+       console.log("Bang Bang!")
+       return clearInterval(timeid);
+     }
+    console.log(n);
+     n--;
+  },1000)
+ };
+
+countDown(10);
+
