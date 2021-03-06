@@ -311,9 +311,11 @@ function takeAnyNumOfFuncs(...args){
   }
 
   }
-   
+   console.log("Exercise 15: \n")
 console.log(takeAnyNumOfFuncs(incrementThenSquare,inc,sq,dec)(2));
-   
+console.log(takeAnyNumOfFuncs(incrementThenSquare,sq,dec)(2));   
+console.log(takeAnyNumOfFuncs(incrementThenSquare,dec)(2));
+console.log(takeAnyNumOfFuncs(dec)(2));
 console.log("--------------------------------------------");
 //exercise 16
 
@@ -383,4 +385,4 @@ const printBangBang2 = (num) => {
     }, 1000*j );
   }
 };
-printBangBang2(10);
+//printBangBang2(10);
