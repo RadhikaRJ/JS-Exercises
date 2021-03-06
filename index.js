@@ -335,3 +335,12 @@ const failCb=()=> {return console.log(`Give my bose speakers and headphones to m
 console.log(willThanosKillMe("Radhika",sucessCb,failCb));
 
 console.log("--------------------------------------------");
+//exercise 18
+
+const printAfterDelay=(msg,delay)=>{
+  setTimeout(()=>console.log(msg),delay)
+}
+
+console.log("Printing after delay of 5 secs");
+printAfterDelay("This is printed after 5 sec delay, did you notice how the dashed line got printed first?",5000);
+console.log("--------------------------------------------");
