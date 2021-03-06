@@ -294,20 +294,11 @@ const hasAt=(a)=>{if(a.includes("at"))return true;}
 console.log("Strings that include at are: \n")
 console.log(containsAt(somestrings));
 console.log("--------------------------------------------");
-
-//exercise 16
-
-const strLength=(name,someFunction)=>{someFunction(name)};
-
-const greet=(n)=>console.log(`${n} have a great day!`);
-
-strLength("Radhika",greet);
-console.log("--------------------------------------------");
-
 //exercise 15
 const inc=(n)=>{return n+1};
 const sq=(n)=>{return n*n};
 const incrementThenSquare=(n)=>{return sq(inc(n));}
+const dec=(n)=>{return n-1};
 
 function takeAnyNumOfFuncs(...args){
   return  function functExecutionOrder(n){
@@ -318,6 +309,29 @@ function takeAnyNumOfFuncs(...args){
 
   }
    
-console.log(takeAnyNumOfFuncs(incrementThenSquare,inc,sq)(2));
+console.log(takeAnyNumOfFuncs(incrementThenSquare,inc,sq,dec)(2));
    
+console.log("--------------------------------------------");
+//exercise 16
+
+const strLength=(name,someFunction)=>{someFunction(name)};
+
+const greet=(n)=>console.log(`${n} have a great day!`);
+
+strLength("Radhika",greet);
+console.log("--------------------------------------------");
+//exercise 17
+
+const willThanosKillMe=(n,s,f)=>{
+  if(n.length%2==0){
+    s();
+  }
+  else f();
+}
+
+const sucessCb=()=>{return console.log(`Yay! I am alive!`);}
+const failCb=()=> {return console.log(`Give my bose speakers and headphones to my sister`);}
+
+console.log(willThanosKillMe("Radhika",sucessCb,failCb));
+
 console.log("--------------------------------------------");
