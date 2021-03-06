@@ -344,3 +344,13 @@ const printAfterDelay=(msg,delay)=>{
 console.log("Printing after delay of 5 secs");
 printAfterDelay("This is printed after 5 sec delay, did you notice how the dashed line got printed first?",5000);
 console.log("--------------------------------------------");
+
+//exercise19
+
+const printAfterEveryXsec=(msg,x)=>{
+  setInterval(()=>console.log(msg),x);
+}
+//printAfterEveryXsec("This is printed after every x interval",30000);
+console.log("--------------------------------------------");
+
+//exercise20
