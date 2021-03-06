@@ -217,20 +217,23 @@ console.log(oddEvenSeparateSum(someNumbers));
 console.log("--------------------------------------------");
 
 //exercise11 A
+let s1=["apple","orange", "mango", "papaya"] ;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+const returnLengthPairs=(s)=>{
+  let cont={};
+  let resp=s.map((item)=>{
+  
+    if(cont[item.length]? true:false){
+      cont[item.length]=cont[item.length]+1;
+    }
+    else{
+      cont[item.length]=1
+    }
+  })
+  return cont;
+}
+console.log("the number of strings with similar/equal number of characters");
+console.log(returnLengthPairs(s1));
 
 console.log("--------------------------------------------");
 //exercise11 B
@@ -366,5 +369,18 @@ const countDown=(n)=>{
   },1000)
  };
 
-countDown(10);
+//countDown(10);
 
+const printBangBang2 = (num) => {
+  for (let j = num; j >= 0; j--) {
+    setTimeout(() => {
+      if (num === 0) {
+        console.log("bang bang");
+      } else {
+        console.log(num);
+      }
+      num--;
+    }, 1000*j );
+  }
+};
+printBangBang2(10);
