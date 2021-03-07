@@ -166,6 +166,7 @@ let sumOfOddIndiceNumbers= anArrayOfNumbers.reduce((current,oddTotal, index)=>{
   }
 })
 
+console.log("sumOfOddIndiceNumbers"+sumOfOddIndiceNumbers);
 console.log("Numbers at odd indices: "+oddIndiceNumbers);
 
 console.log("Sum of numbers at odd Indices: "+total);
@@ -386,3 +387,54 @@ const printBangBang2 = (num) => {
   }
 };
 //printBangBang2(10);
+function fakeFetch(msg, shouldReject) {
+
+
+return new Promise((resolve, reject) => {
+
+setTimeout(() => {
+
+if (shouldReject) {
+
+reject(`error from server: ${msg}`);
+
+}
+
+resolve(`from server: ${msg}`);
+
+}, 3000);
+
+});
+
+}
+
+console.log("--------------------------------------------");
+//exercise23
+
+//fakeFetch("someMsgOnSuccess",false).then((data)=>console.log(data));
+//fakeFetch("someMsgOnFailure",true).then((data)=>console.log(data));
+console.log("--------------------------------------------");
+//exercise24
+ try{
+// fakeFetch("Happy Coding",true)
+ }catch(error){
+   console.error(error)
+ }
+
+console.log("--------------------------------------------");
+//exercise25
+function getServerResponseLength(msg,val){
+  
+  try{
+   let resp= fakeFetch(msg,val).then((data)=>console.log(data,data.length));
+   
+    
+  }catch(error){
+    console.error(error);
+  }
+}
+
+//getServerResponseLength("Radhika",false);
+console.log("--------------------------------------------");
+//exercise26
+
